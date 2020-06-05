@@ -1,24 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import logo from './components/images/LOGO.jpg';
 
+import "./App.css";
+import Empleados from "./components/Empleados";
+import Reservas from "./components/Reservas";
+import Promos from "./components/Promos";
+import Customer from "./components/Customers";
+import Orders from "./components/Orders";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>BBControl Analytics Engine</h1>
+      <img src={logo} alt="Logo" height="250"/>
+      <Empleados></Empleados>
+      <Reservas></Reservas>
+      <Promos></Promos>
+      <Customer></Customer>
+      <Orders></Orders>
     </div>
   );
 }
